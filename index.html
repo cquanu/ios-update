@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>iOS Update Prank</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .update-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .logo img {
+            width: 90px;
+        }
+        
+        .progress-bar {
+            position: relative;
+            margin-top: 30px;
+            width: 200px;
+            height: 3px;
+            background: lightgray;
+            border-radius: 30px;
+        }
+        
+        .progress-bar .loaded {
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 0px;
+            height: 3px;
+            background: #000;
+            border-radius: 30px;
+            -webkit-animation: w100 240s ease forwards;
+            animation: w100 240s ease forwards;
+        }
+        
+        .progress-bar .w100 {
+            width: 100%;
+        }
+        
+        @-webkit-keyframes w100 {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="update-screen">
+        <div class="logo">
+            <img src="logo.svg" alt="Apple Logo">
+        </div>
+
+        <div class="progress-bar">
+            <div class="loaded"></div>
+        </div>
+    </div>
+</body>
+
+</html>
